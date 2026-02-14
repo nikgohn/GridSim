@@ -25,14 +25,13 @@ jobs:
           distribution: 'temurin'
 
       - name: Install Dependencies
-        run: npm install
+        run: npm ci 
 
       - name: Build Next.js (SSG)
         run: npm run build
 
       - name: Capacitor Sync
-        run: |
-          npx cap sync android
+        run: npx @capacitor/cli sync android
 
       - name: Build APK with Gradle
         run: |
