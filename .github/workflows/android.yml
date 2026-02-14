@@ -34,6 +34,7 @@ jobs:
         run: |
           npm install @capacitor/core
           npm install -D @capacitor/cli @capacitor/android
+          npx @capacitor/cli add android
           npx @capacitor/cli sync android
 
       - name: Build APK with Gradle
